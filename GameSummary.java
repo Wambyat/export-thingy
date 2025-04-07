@@ -4,6 +4,13 @@ public class GameSummary {
     private int launches;
     private int playtime;
 
+    public GameSummary(long firstPlayed, long lastPlayed, int launches, int playtime) {
+        this.firstPlayed = firstPlayed;
+        this.lastPlayed = lastPlayed;
+        this.launches = launches;
+        this.playtime = playtime;
+    }
+
     public long getFirstPlayed() {
         return firstPlayed;
     }

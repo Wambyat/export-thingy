@@ -1,10 +1,18 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private List<Events> events;
+    private List<Event> events;
     private String id;
     private String name;
     private GameSummary gameSummary;
+
+    public Game(String id, String name, GameSummary gameSummary) {
+        this.events = new ArrayList<>();
+        this.id = id;
+        this.name = name;
+        this.gameSummary = gameSummary;
+    }
 
     public String getId() {
         return id;
@@ -30,15 +38,15 @@ public class Game {
         this.gameSummary = summary;
     }
 
-    public List<Events> getEvents() {
+    public List<Event> getEvents() {
         return events;
     }
 
-    public void addEvent(Events event) {
+    public void addEvent(Event event) {
         this.events.add(event);
     }
 
-    public void setEvents(List<Events> events) {
+    public void setEvents(List<Event> events) {
         this.events = events;
     }
 }
